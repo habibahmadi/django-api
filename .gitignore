@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+*.sqlite3
+*.db
+
+# Static files (usually collected by Django)
+/staticfiles/
+/static/
+
+# Media files
+/media/
+
+# Environment variables
+.env
+
+# Logs and debug logs
+logs/
+*.log
+*.log.*
+*.log-*
+
+# macOS-related
+.DS_Store
+
+# IDE/Editor specific files
+.vscode/
+*.idea/
+*.vscode/
+
+# Dependency directories (Python virtualenv)
+.env/
+venv/
+venv*/
+*/venv/
+
+# Compiled Python files
+*.pyc
+
+# Ignore migrations, as they can contain sensitive info
+**/migrations/*.py
+**/migrations/*.pyc
+**/migrations/__pycache__/
