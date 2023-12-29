@@ -5,7 +5,7 @@ set -e
 # TODO: Set to URL of git repo.
 PROJECT_GIT_URL='https://github.com/habibahmadi/pass_manager.git'
 
-PROJECT_BASE_PATH='/usr/local/apps/pass_manager_project'
+PROJECT_BASE_PATH='/usr/local/apps/pass_manager'
 
 # Set Ubuntu Language
 locale-gen en_GB.UTF-8
