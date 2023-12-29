@@ -8,7 +8,7 @@ from pass_manager_project import settings
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings)
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings.__name__)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
