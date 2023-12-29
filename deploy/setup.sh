@@ -23,8 +23,8 @@ python3 -m venv $PROJECT_BASE_PATH/env
 $PROJECT_BASE_PATH/env/bin/pip install -r $PROJECT_BASE_PATH/requirements.txt uwsgi==2.0.21
 
 # Run migrations
-$PROJECT_BASE_PATH/env/bin/python $PROJECT_BASE_PATH/pass_manager/manage.py migrate
-$PROJECT_BASE_PATH/env/bin/python $PROJECT_BASE_PATH/pass_manager/manage.py collectstatic --noinput
+$PROJECT_BASE_PATH/env/bin/python $PROJECT_BASE_PATH/manage.py migrate
+$PROJECT_BASE_PATH/env/bin/python $PROJECT_BASE_PATH/manage.py collectstatic --noinput
 # Setup Supervisor to run our uwsgi process.
 cp $PROJECT_BASE_PATH/pass_manager/deploy/supervisor_pass_manager_app.conf /etc/supervisor/conf.d/pass_manager_app.conf
 supervisorctl reread
