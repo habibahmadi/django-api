@@ -4,10 +4,11 @@ import os
 import sys
 import pprint
 pprint.pprint(sys.path)
+from pass_manager_project import settings
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pass_manager_project.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
