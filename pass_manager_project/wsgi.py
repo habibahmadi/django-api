@@ -11,7 +11,7 @@ import os
 import sys
 
 # Add the path to your Django project directory
-sys.path.append('/usr/local/apps/pass_manager')
+sys.path.append('/usr/local/apps/pass_manager/pass_manager_project')
 
 from django.core.wsgi import get_wsgi_application
 
