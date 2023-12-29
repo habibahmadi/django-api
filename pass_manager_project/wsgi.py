@@ -8,6 +8,10 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
 import os
+import sys
+
+# Add the path to your Django project directory
+sys.path.append('/usr/local/apps/pass_manager')
 
 from django.core.wsgi import get_wsgi_application
 

@@ -2,13 +2,16 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import pprint
-pprint.pprint(sys.path)
-from pass_manager_project import settings
+
+# Get the directory where this file is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Append the project directory to the Python path
+sys.path.append(os.path.join(BASE_DIR, 'pass_manager_project'))
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings.__name__)
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pass_manager_project.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -18,7 +21,6 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
-
 
 if __name__ == '__main__':
     main()
